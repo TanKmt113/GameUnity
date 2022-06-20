@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Rook
+  - Ground
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Backgroud
+    uniqueID: 1920335489
+    locked: 0
+  - name: Fourground
+    uniqueID: 526380761
+    locked: 0
+  - name: Player
+    uniqueID: 246950593
+    locked: 0
+  - name: Front
+    uniqueID: 1148674523
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
