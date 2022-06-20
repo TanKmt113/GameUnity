@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -102,16 +102,12 @@ public class Dino : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Rook"))
+        if (col.gameObject.CompareTag("Bom"))
         {
             if (m_isDead) return;
-
-
-            Ston stone = col.gameObject.GetComponent<Ston>();
-
-            if (stone && ! stone.IsGround)
             {
-               Die();
+                Ston stone = col.gameObject.GetComponent<Ston>();
+                Die();
 
                 GameManager.Ins.IsGameover = true;
 
@@ -119,10 +115,18 @@ public class Dino : MonoBehaviour
 
                 AudioController.Ins.PlaySound(AudioController.Ins.loseSound);
 
-                AudioController.Ins.PlaySound(AudioController.Ins.landSound);  
-
-
+                AudioController.Ins.PlaySound(AudioController.Ins.landSound);
+            
             }
+        }else if (col.gameObject.CompareTag("Rook"))
+        {
+           
+
+            GameManager.Ins.Score++;
+
+            GameGuiManager.Ins.UpdateScoreCouting(GameManager.Ins.Score);
+            
         }
     }
+
 }
