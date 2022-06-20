@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,19 +26,17 @@ public class Ston : MonoBehaviour
 
     }
     private void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.CompareTag("Ground")){
-            m_idGround=true;
+        if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Player"))
+        {
+         
+                m_idGround = true;
+                Destroy(gameObject, 0.03f);
 
-            Destroy(gameObject,0.1f);
-
-            GameManager.Ins.Score++;
-
-            GameGuiManager.Ins.UpdateScoreCouting(GameManager.Ins.Score);
             AudioController.Ins.PlaySound(AudioController.Ins.landSound);
 
         }
     }
 
 
-   
+
 }
